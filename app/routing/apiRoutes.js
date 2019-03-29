@@ -10,7 +10,14 @@ router.get("/api/friends",function(req, res){
 
 // Post data into friends
 router.post("/api/friends", function(req, res){
+    console.log(req.body);
 
+
+    friends.push({
+      name: req.body.name,
+      photo: req.body.photo,
+      scores: req.body.scores
+    })
 });
 
 module.exports = router;
